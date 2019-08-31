@@ -7,7 +7,20 @@
     grid-row: 1;
 }
 
+/*.bin-text {*/
+/*    text-align: center;*/
+/*    vertical-align: middle;*/
+/*}*/
+
 .bin-text {
-    text-align: center;
-    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bin-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
