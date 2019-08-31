@@ -1,0 +1,13 @@
+.bin-wrapper {
+    display: grid;
+}
+
+.bin-elements {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.bin-text {
+    text-align: center;
+    vertical-align: middle;
+}
