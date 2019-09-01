@@ -8,11 +8,11 @@ function get_percentage(dist) {
 
 function update_ui(percentage1, percentage2) {
     document.getElementById("bin-text1").textContent = percentage1.toString() + "%"
-    document.getElementById("image-overlay1").style.height = percentage1 + "%"
+    document.getElementById("image-overlay1").style.clipPath = "inset(" + (100-percentage1).toString() + "% 0% 0% 0%)"
     document.getElementById("bin-text2").textContent = percentage2.toString() + "%"
-    document.getElementById("image-overlay2").style.height = percentage2 + "%"
-    reduced = reduce(percentage1, percentage2)
-    document.getElementById("ratio").textContent = reduced[0].toString() + ":" + reduced[1].toString()
+    document.getElementById("image-overlay2").style.clipPath = "inset(" + (100-percentage2).toString() + "% 0% 0% 0%)"
+    // reduced = reduce(percentage1, percentage2)
+    // document.getElementById("ratio").textContent = reduced[0].toString() + ":" + reduced[1].toString()
 }
 
 function reduce(numerator,denominator){
