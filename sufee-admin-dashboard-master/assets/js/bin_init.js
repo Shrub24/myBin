@@ -1,8 +1,8 @@
 const server_url = "http://localhost:8000/"
 
 function get_percentage(dist) {
-    max_height = 60
-    return 100 - ((max_height - (dist / 1000))/max_height) * 100
+    max_height = 34000
+    return ((max_height - (dist))/max_height) * 100
 }
 
 function update_ui(percentage1, percentage2) {
@@ -49,24 +49,14 @@ window.onload = function(){
 
     // cors issues!!!
     // get data
-    fetch(server_url, {method: "GET"})
-      .then(
-        function(response) {
-          if (response.status !== 200) {
-            console.log('Looks like there was a problem. Status Code: ' +
-              response.status);
-            return;
-          }
-
-          // Examine the text in the response
-          response.json().then(function(data) {
-              console.log(response)
-              update_ui(get_percentage(response), 50)
-          });
-        }
-      )
-      .catch(function(err) {
-          console.log('Fetch Error :-S', err);
-      });
-    update_ui(20, 60)
+  fetch(server_url, {method: "GET"}).then(function (response) {
+    if (!response.ok) {
+      return false
+    }
+    return response.json();
+  })
+  .then(function(body) {
+      console.log(body)
+      update_ui(parseInt(get_percentage(body), 10), 50)
+  })
 }
