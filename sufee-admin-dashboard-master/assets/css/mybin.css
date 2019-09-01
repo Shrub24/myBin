@@ -46,3 +46,14 @@
     clip-path: inset(20% 0% 0% 0%)
 
 }
+
+.image-parent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
+}

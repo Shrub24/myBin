@@ -10,11 +10,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sufee Admin - HTML5 Admin Template</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="description" content="myBin">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
@@ -44,8 +43,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+                <a class="navbar-brand" href="./">myBin</a>
+                <a class="navbar-brand hidden" href="./">mB</a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -155,68 +154,25 @@
                         <div class="dropdown for-notification">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-bell"></i>
-                                <span class="count bg-danger">5</span>
+                                <span class="count bg-danger">3</span>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="notification">
-                                <p class="red">You have 3 Notification</p>
-                                <a class="dropdown-item media bg-flat-color-1" href="#">
+                                <a class="dropdown-item media" href="#">
                                 <i class="fa fa-check"></i>
-                                <p>Server #1 overloaded.</p>
+                                <p>Your bin has been collected!</p>
                             </a>
-                                <a class="dropdown-item media bg-flat-color-4" href="#">
+                                <a class="dropdown-item media" href="#">
                                 <i class="fa fa-info"></i>
-                                <p>Server #2 overloaded.</p>
+                                <p>John Doe wants to share bins with you</p>
                             </a>
-                                <a class="dropdown-item media bg-flat-color-5" href="#">
+                                <a class="dropdown-item media" href="#">
                                 <i class="fa fa-warning"></i>
-                                <p>Server #3 overloaded.</p>
+                                <p>You have 3 new bin buddy requests</p>
                             </a>
                             </div>
                         </div>
 
-                        <div class="dropdown for-message">
-                            <button class="btn btn-secondary dropdown-toggle" type="button"
-                                id="message"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="ti-email"></i>
-                                <span class="count bg-primary">9</span>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="message">
-                                <p class="red">You have 4 Mails</p>
-                                <a class="dropdown-item media bg-flat-color-1" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>
-                                <span class="message media-body">
-                                    <span class="name float-left">Jonathan Smith</span>
-                                    <span class="time float-right">Just now</span>
-                                        <p>Hello, this is an example msg</p>
-                                </span>
-                            </a>
-                                <a class="dropdown-item media bg-flat-color-4" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/2.jpg"></span>
-                                <span class="message media-body">
-                                    <span class="name float-left">Jack Sanders</span>
-                                    <span class="time float-right">5 minutes ago</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                </span>
-                            </a>
-                                <a class="dropdown-item media bg-flat-color-5" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>
-                                <span class="message media-body">
-                                    <span class="name float-left">Cheryl Wheeler</span>
-                                    <span class="time float-right">10 minutes ago</span>
-                                        <p>Hello, this is an example msg</p>
-                                </span>
-                            </a>
-                                <a class="dropdown-item media bg-flat-color-3" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>
-                                <span class="message media-body">
-                                    <span class="name float-left">Rachel Santos</span>
-                                    <span class="time float-right">15 minutes ago</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                </span>
-                            </a>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -267,7 +223,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Dashboard</h1>
+                        <h1>Bin Buddies</h1>
                     </div>
                 </div>
             </div>
@@ -275,7 +231,7 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li class="active">Dashboard</li>
+                            <li class="active">Bin Buddies</li>
                         </ol>
                     </div>
                 </div>
@@ -283,93 +239,101 @@
         </div>
 
         <div class="content mt-3">
-
-            <div class="col-xl-6 bin-wrapper">
-                <div class="bin-elements">
-                    <img class="bin-image" src="assets/mb-assets/bin-transparent.png"/>
-                    <div class="overlay-parent" id="image-overlay1">
-                        <img class="bin-image-overlay" src="assets/mb-assets/bin-green.png"/>
+            <div class="animated fadeIn">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="stat-widget-one">
+                        <div class="card-body col-lg-4">
+                            <img class="rounded-circle d-block" src="images/admin.jpg" alt="Card image cap"/>
+                            <h5 class=" mt-2 mb-1">Steven Lee</h5>
+                            <div class="location "><i class="fa fa-map-marker"></i> 21 Premier Drive, Berwick</div>
+                        </div>
+                        <span class="col-lg-2" style="display:block"> </span>
+                        <div class="card-body col-lg-3">
+                            <div class="bin-elements">
+                                <img class="bin-image" src="assets/mb-assets/bin-transparent.png" style="opacity:0; z-index:-2;"/>
+                                <img class="bin-image image-parent" src="assets/mb-assets/bin-transparent.png" style="position:absolute; z-index:0;"/>
+                                 <div class="overlay-parent" id="image-overlay1">
+                                    <img class="bin-image-overlay" src="assets/mb-assets/bin-green.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body col-lg-3">
+                            <div class="bin-elements">
+                                <img class="bin-image" src="assets/mb-assets/bin-transparent.png" style="opacity:0; z-index:-2;"/>
+                                <img class="bin-image image-parent" src="assets/mb-assets/bin-transparent.png" style="position:absolute; z-index:0;"/>
+                                <div class="overlay-parent" id="image-overlay2">
+                                    <img class="bin-image-overlay" src="assets/mb-assets/bin-blue.png"/>
+                                </div>
+                           </div>
+                        </div>
                     </div>
-                        <h1 class="bin-elements bin-text" id="bin-text1"></h1>
-                    </div>
-
+                </div>
                 <!-- /# card -->
-            </div>
-            <div class="col-xl-6 bin-wrapper">
-                <div class="bin-elements">
-                    <img class="bin-image" src="assets/mb-assets/bin-transparent.png"/>
-                    <div class="overlay-parent" id="image-overlay2">
-                        <img class="bin-image-overlay" src="assets/mb-assets/bin-blue.png"/>
-                    </div>
-                    <h1 class="bin-elements bin-text" id="bin-text2"></h1>
                 </div>
-            </div>
-                <!--/.col-->
-            <div class="col-6 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="clearfix">
-                            <i class="fa fa-laptop bg-info p-3 font-2xl mr-3 float-left text-light"></i>
-                            <div class="h5 text-secondary mb-0 mt-1">3 : 1</div>
-                            <div class="text-muted text-uppercase font-weight-bold font-xs small">Recycling Ratio</div>
-                        </div>
-                        <div class="b-b-1 pt-3"></div>
-                        <hr>
-                        <div class="more-info pt-2" style="margin-bottom:-10px;">
-                            <a class="font-weight-bold font-xs btn-block text-muted small" href="#">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/.col-->
-            <div class="col-6 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="clearfix">
-                            <i class="fa fa-moon-o bg-warning p-3 font-2xl mr-3 float-left text-light"></i>
-                            <div class="h5 text-secondary mb-0 mt-1">16000</div>
-                            <div class="text-muted text-uppercase font-weight-bold font-xs small">Bin Buddies</div>
-                        </div>
-                        <div class="b-b-1 pt-3"></div>
-                        <hr>
-                        <div class="more-info pt-2" style="margin-bottom:-10px;">
-                            <a class="font-weight-bold font-xs btn-block text-muted small" href="#">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/.col-->
-            <div class="col-6 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="clearfix">
-                            <i class="fa fa-bell bg-danger p-3 font-2xl mr-3 float-left text-light"></i>
-                            <div class="h5 text-secondary mb-0 mt-1">over 9000</div>
-                            <div class="text-muted text-uppercase font-weight-bold font-xs small">Recycling Points</div>
-                        </div>
-                        <div class="b-b-1 pt-3"></div>
-                        <hr>
-                        <div class="more-info pt-2" style="margin-bottom:-10px;">
-                            <a class="font-weight-bold font-xs btn-block text-muted small" href="#">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-6 col-lg-3">
+                <div class="col-lg-12">
                 <div class="card">
-                    <div class="card-body">
-                        <div class="clearfix">
-                            <i class="fa fa-bell bg-danger p-3 font-2xl mr-3 float-left text-light"></i>
-                            <div class="h5 text-secondary mb-0 mt-1">2/09/3019</div>
-                            <div class="text-muted text-uppercase font-weight-bold font-xs small">Next Collection</div>
+                    <div class="stat-widget-one">
+                        <div class="card-body col-lg-4">
+                            <img class="rounded-circle d-block" src="assets/mb-assets/harold.png" alt="Card image cap"/>
+                            <h5 class=" mt-2 mb-1">Harold</h5>
+                            <div class="location "><i class="fa fa-map-marker"></i> 17 St Annes Cres, Berwick</div>
                         </div>
-                        <div class="b-b-1 pt-3"></div>
-                        <hr>
-                        <div class="more-info pt-2" style="margin-bottom:-10px;">
-                            <a class="font-weight-bold font-xs btn-block text-muted small" href="#">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
+                        <span class="col-lg-2" style="display:block"> </span>
+                        <div class="card-body col-lg-3">
+                            <div class="bin-elements">
+                                <img class="bin-image" src="assets/mb-assets/bin-transparent.png" style="opacity:0; z-index:-2;"/>
+                                <img class="bin-image image-parent" src="assets/mb-assets/bin-transparent.png" style="position:absolute; z-index:0;"/>
+                                 <div class="overlay-parent" style="clip-path: inset(40% 0% 0% 0%)">
+                                    <img class="bin-image-overlay" src="assets/mb-assets/bin-green.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body col-lg-3">
+                            <div class="bin-elements">
+                                <img class="bin-image" src="assets/mb-assets/bin-transparent.png" style="opacity:0; z-index:-2;"/>
+                                <img class="bin-image image-parent" src="assets/mb-assets/bin-transparent.png" style="position:absolute; z-index:0;"/>
+                                <div class="overlay-parent" style="clip-path: inset(20% 0% 0% 0%)">
+                                    <img class="bin-image-overlay" src="assets/mb-assets/bin-blue.png"/>
+                                </div>
+                           </div>
                         </div>
                     </div>
+                <!-- /# card -->
+                </div>
+                </div>
+
+                <div class="col-lg-12">
+                <div class="card">
+                    <div class="stat-widget-one">
+                        <div class="card-body col-lg-4">
+                            <img class="rounded-circle d-block" src="assets/mb-assets/ricardo.png" alt="Card image cap"/>
+                            <h5 class=" mt-2 mb-1">Ricardo</h5>
+                            <div class="location "><i class="fa fa-map-marker"></i> 24 McCubbin Way, Berwick</div>
+                        </div>
+                        <span class="col-lg-2" style="display:block"> </span>
+                        <div class="card-body col-lg-3">
+                            <div class="bin-elements">
+                                <img class="bin-image" src="assets/mb-assets/bin-transparent.png" style="opacity:0; z-index:-2;"/>
+                                <img class="bin-image image-parent" src="assets/mb-assets/bin-transparent.png" style="position:absolute; z-index:0;"/>
+                                 <div class="overlay-parent" style="clip-path: inset(23% 0% 0% 0%)">
+                                    <img class="bin-image-overlay" src="assets/mb-assets/bin-green.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body col-lg-3">
+                            <div class="bin-elements">
+                                <img class="bin-image" src="assets/mb-assets/bin-transparent.png" style="opacity:0; z-index:-2;"/>
+                                <img class="bin-image image-parent" src="assets/mb-assets/bin-transparent.png" style="position:absolute; z-index:0;"/>
+                                <div class="overlay-parent" style="clip-path: inset(70% 0% 0% 0%)">
+                                    <img class="bin-image-overlay" src="assets/mb-assets/bin-blue.png"/>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /# card -->
                 </div>
             </div>
     <!--/.col-->
