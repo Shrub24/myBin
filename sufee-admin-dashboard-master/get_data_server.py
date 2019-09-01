@@ -22,10 +22,11 @@ class Handler(BaseHTTPRequestHandler):
         # print(response)
 
         self.send_response(200)
-        self.send_header('Content-type', 'text/plain')
+        self.send_header('Content-type', 'application/json')
         self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
 
+        print(response)
         self.wfile.write(json.dumps(response).encode())
         return
 
